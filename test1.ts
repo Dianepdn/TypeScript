@@ -23,6 +23,7 @@ interface namelist {
 var listN:namelist = ["John","Sue","Bran","Steve"] // error. if put 1 inplace of "Sue" is not type string
 
 console.log(listN[1])
+console.log(listN[2])
 interface ages {
     [index:string]:number
 }
