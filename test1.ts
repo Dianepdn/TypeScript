@@ -30,3 +30,17 @@ interface ages {
 var listAge:ages 
 listAge["John"] = 15 //ok
 listAge["sue"] = 20 // listAge[2] = "nine" //error
+
+//Interfaces and Inheritance
+    //Simple Interface Inheritance
+    interface Person {
+        age:number
+    }
+    interface Musician extends Person {
+        instrument:string
+    }
+    var drummer = <Musician>{}
+    drummer.age = 20
+    drummer.instrument = "drums"
+    console.log("Drummer's age" + drummer.age)  
+    console.log("play" + drummer.instrument)
