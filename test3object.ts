@@ -32,3 +32,27 @@ var invokeperson = function(obj:{firstName:string, lastName:string}) {
 invokeperson(person)    // First name: Hanna
                         // Last name: Smith
 
+//You can create and pass an anonymous object on the fly
+invokeperson({firstName:"John", lastName:"Do"})    // First name: John
+                                                    // Last name: Do        
+                                                    
+// DUCK-TYPING: 2 objects are considered to be of the same type if both share the same
+// set of properties. DUCK-TYPING verifies the presence of certain properties in the
+// objects, rather than their actual type, to check their suitability. TypeScript
+// compiler implements the DUCK-TYPING system that allows object creation on the fly
+// while keeping type safety.
+interface IPoint {
+    x:number
+    y:number
+}
+function addPoints(p1:IPoint, p2:IPoint):IPoint {
+    var x = p1.x + p2.x
+    var y = p1.y + p2.y
+    return {x:x,y:y}
+}
+//Valid
+var newPoint = addPoints({x:3,y:4},{x:5,y:1})
+console.log(newPoint) // {x:8, y:5}
+
+//Error
+var newPoint2 = addPoints({x:1},{x:4,y:3}) //Property 'y' is missing in type '{x: number; }'.
