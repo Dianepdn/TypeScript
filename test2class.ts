@@ -65,4 +65,22 @@ class StringPrinter extends PrinterClass {
 var obj4 = new StringPrinter()
 obj4.doWork() // invokes the super class version of the doWork() function
 
+//The static Keyword: can be applied to the data membres of a class
+//A static variable retains its values till the program finishes
+//Static members are referenced by the class name
+class StaticMem {
+    static num:number
+    static disp():void {
+        console.log("The value of num is  " + StaticMem.num)
+    }
+}
+StaticMem.num = 12 //initiatlize the static variable
+StaticMem.disp() // invoke the static method
+
+//The instanceof operator: returns true if the object belongs to the specified type
+class Person{ }
+var obj5 = new Person()
+var isPerson = obj5 instanceof Person
+console.log(" obj5 is an instance of Person?: " + isPerson)
+
 

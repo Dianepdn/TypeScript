@@ -90,9 +90,31 @@ var StringPrinter = /** @class */ (function (_super) {
     }
     StringPrinter.prototype.doWork = function () {
         _super.prototype.doPrint.call(this); //The super keyword can be used to refer to the super class version of 
-        console.log("doPrint() is printing a string.."); //a variable, property or method
+        console.log("doPrint() is printing a string.."); // ^ a variable, property or method ^
     };
     return StringPrinter;
 }(PrinterClass));
 var obj4 = new StringPrinter();
-obj4.doWork();
+obj4.doWork(); // invokes the super class version of the doWork() function
+//The static Keyword: can be applied to the data membres of a class
+//A static variable retains its values till the program finishes
+//Static members are referenced by the class name
+var StaticMem = /** @class */ (function () {
+    function StaticMem() {
+    }
+    StaticMem.disp = function () {
+        console.log("The value of num is  " + StaticMem.num);
+    };
+    return StaticMem;
+}());
+StaticMem.num = 12; //initiatlize the static variable
+StaticMem.disp(); // invoke the static method
+//The instanceof operator: returns true if the object belongs to the specified type
+var Person = /** @class */ (function () {
+    function Person() {
+    }
+    return Person;
+}());
+var obj5 = new Person();
+var isPerson = obj5 instanceof Person;
+console.log(" obj5 is an instance of Person  " + isPerson);
