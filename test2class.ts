@@ -83,4 +83,7 @@ var obj5 = new Person()
 var isPerson = obj5 instanceof Person
 console.log(" obj5 is an instance of Person?: " + isPerson)
 
+//Data Hiding: detail be continue later..
 
+
+//Classes and Interfaces: be continue later..
