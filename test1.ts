@@ -52,7 +52,8 @@ var listAge:ages
     interface iParent2 {
         v2:number
     }
-    interface child extends iParent1, iParent2 {}
-    var iObj:child = {v1:12, v2:23}
+    interface child extends iParent1, iParent2 {} 
+        var iObj:child = {v1:12, v2:23}
     console.log("child's value1: " + iObj.v1 + ", child's value2: " + iObj.v2)
     console.log("value1: " +this.v1 + " value2: " +this.v2) // the "this" here does not work -> value1 = undefined ..
+    
