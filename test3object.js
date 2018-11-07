@@ -38,6 +38,6 @@ function addPoints(p1, p2) {
 }
 //Valid
 var newPoint = addPoints({ x: 3, y: 4 }, { x: 5, y: 1 });
-console.log(newPoint);
+console.log(newPoint); // {x:8, y:5}
 //Error
-var newPoint2 = addPoints({ x: 1 }, { x: 4, y: 3 });
+var newPoint2 = addPoints({ x: 1 }, { x: 4, y: 3 }); //Property 'y' is missing in type '{x: number; }'.
