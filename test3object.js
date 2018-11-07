@@ -7,13 +7,24 @@ var object_name = {
     key3: function () {
         //functions
     },
-    key4: ["conten1", "conten2"] // cp;;ectopm
+    key4: ["conten1", "conten2"] // collection
 };
 //Object Literal Notation
 var person = {
-    firstname: "Hanna",
-    lastname: "Smith"
+    firstName: "Hanna",
+    lastName: "Smith",
+    sayHello: function () { } //Type template
 };
+person.sayHello = function () {
+    console.log("Hello " + person.firstName);
+};
+person.sayHello(); // Hello Hanna
 //access the object values
-console.log(person.firstname);
-console.log(person.lastname);
+console.log(person.firstName); //Hanna
+console.log(person.lastName); //Smith
+//Objects as function parameters
+var invokeperson = function (obj) {
+    console.log("First name: " + obj.firstName);
+    console.log("Last name: " + obj.lastName);
+};
+invokeperson(person);
