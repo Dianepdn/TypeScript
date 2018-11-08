@@ -56,3 +56,7 @@ console.log(newPoint) // {x:8, y:5}
 
 //Error
 var newPoint2 = addPoints({x:1},{x:4,y:3}) //Property 'y' is missing in type '{x: number; }'.
+
+
+
+
